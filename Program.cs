@@ -6,12 +6,12 @@ namespace DotNet8.ApiGatewayUsingOcelot
 {
     public class Program
     {
-        public static async void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Configuration.AddJsonFile("oclet.json",optional:false,reloadOnChange:true);
+            builder.Configuration.AddJsonFile("ocelet.json", optional: false, reloadOnChange: true);
             builder.Services.AddOcelot();
 
             builder.Services.AddControllers();
